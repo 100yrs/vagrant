@@ -10,6 +10,7 @@ sudo apt-get -y install openjdk-7-jre
 # Install elasticsearch
 wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 curl -L -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-2.2.0.deb
+sudo apt-get update
 sudo dpkg -i elasticsearch-2.2.0.deb
 
 # Add as service

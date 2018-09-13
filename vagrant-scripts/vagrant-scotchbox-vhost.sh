@@ -25,7 +25,7 @@ shift # past argument or value
 done
 
 echo "Copying vhost config for ${DOMAIN} at ${WEBROOT} from template..."
-sudo cp /etc/apache2/sites-available/scotchbox.local.conf /etc/apache2/sites-available/$DOMAIN.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/$DOMAIN.conf
 echo "Updating vhost config template for ${DOMAIN}..."
 sudo sed -i s,scotchbox.local,$DOMAIN,g /etc/apache2/sites-available/$DOMAIN.conf
 sudo sed -i s,/var/www/public,$WEBROOT,g /etc/apache2/sites-available/$DOMAIN.conf
